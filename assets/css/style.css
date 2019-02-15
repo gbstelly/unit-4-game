@@ -1,0 +1,99 @@
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+  }
+
+  header {
+    margin-left: 10px;
+    display: block;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    background: rgb(172, 112, 172);
+    text-align: center;
+    border: 50px;
+    width: 500px;
+    
+  }
+
+.instructions {
+    margin-left: 10px;
+    display: block;
+    padding: 10px;
+    color: black;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 700;
+    background: whitesmoke;
+    text-align: left;
+    border: 40%;
+    height: 200px;
+    width: 50%;
+
+}
+
+#randomNumber {
+    margin-left: 10px;
+    display: block;
+    padding: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    background: black;
+    text-align-last: 20px;
+    height: 200px;
+    border: 50%;
+    width: 150px;
+    float: left;
+    overflow: hidden;
+
+}
+
+#aside {
+    margin-left: 20px;
+    display: block;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    background: yellow;
+    text-align-last: 20px;
+    height: 200px;
+   /*border: 50%;*/
+    width: 200px;
+    overflow: hidden;
+    
+}
+
+.crystals{
+    margin-left: 10px;
+    display:flex;
+    justify-content: flex-start;
+    /*justify-content: space-around;*/
+    /*align-content: center;*/
+}
+
+
+.crystal{
+    border:1px solid red;
+    height:200px;
+    width:200px;
+
+}
