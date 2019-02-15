@@ -16,7 +16,7 @@ body {
     margin-left: 10px;
     display: block;
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: white;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 30px;
@@ -24,7 +24,7 @@ body {
     background: rgb(172, 112, 172);
     text-align: center;
     border: 50px;
-    width: 500px;
+    width: 400px;
     
   }
 
@@ -34,13 +34,13 @@ body {
     padding: 10px;
     color: black;
     font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
-    background: whitesmoke;
+    background: rgb(231, 226, 226);
     text-align: left;
     border: 40%;
     height: 200px;
-    width: 50%;
+    width: 45%;
 
 }
 
@@ -56,9 +56,9 @@ body {
     font-weight: 700;
     background: black;
     text-align-last: 20px;
-    height: 200px;
+    height: 70px;
     border: 50%;
-    width: 150px;
+    width: 200px;
     float: left;
     overflow: hidden;
 
@@ -73,9 +73,9 @@ body {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 30px;
     font-weight: 700;
-    background: yellow;
+    background: pink;
     text-align-last: 20px;
-    height: 200px;
+    height: 70px;
    /*border: 50%;*/
     width: 200px;
     overflow: hidden;
@@ -92,8 +92,35 @@ body {
 
 
 .crystal{
-    border:1px solid red;
+    border:1px solid blueviolet;
     height:200px;
     width:200px;
 
+}
+
+#yourscore {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+  background: rgb(172, 112, 172);
+ /* text-align-last: 20px;*/
+  text-align: center;
+  height: 70px;
+ /*border: 50%;*/
+  width: 200px;
+  overflow: hidden;
+  
+}
+
+#yourScoreTotal {
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  color: black;
 }

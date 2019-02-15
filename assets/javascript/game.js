@@ -1,38 +1,54 @@
 
-$(document).ready(function() {
-var randomResult;
-var losses;
-var wins;
-randomResult = Math.floor((Math.random() * 69)+30);
-console.log(randomResult);
-$("#randomNumber").html(randomResult);
+  $(document).ready(function() {
+    var randomResult;
+    var losses;
+    var wins;
+    var score = 0;
+    var randomCrystalNumber;
+    randomResult = Math.floor((Math.random() * 69)+30);
+    console.log(randomResult);
+    $("#randomNumber").html(randomResult);
 
-for (var i = 0; i <4; i++){
-    var random = Math.floor((Math.random() * 20)+1);
-   // console.log(random);
-    var image = "./assets/images/crystal" + [i] + ".jpg";
-    // Each crystal image (with all it classes and attributes) will get added to the page.
-    var crystal = $("<img>");
-        crystal.attr({
-            "class":"crystal",
-            //"src": "./assets/images/crystal1.jpg",
-            "src": image,
-            "data-random":random});
-    $(".crystals").append(crystal);
-}
+    for (var i = 0; i <4; i++){
+        var random = Math.floor((Math.random() * 20)+1);
+      // console.log(random);
+        var image = "./assets/images/crystal" + [i] + ".jpg";
+        // Each crystal image (with all it classes and attributes) will get added to the page.
+        var crystal = $("<img>");
+            crystal.attr({
+                "class":"crystal",
+                //"src": "./assets/images/crystal1.jpg",
+                "src": image,
+                "data-random":random});
+        $(".crystals").append(crystal);
+    }
 
-wins = 12;
-losses = 10;
-$("#losses").html(losses);
-
-console.log($("#wins").html(wins));
-$(".crystal").on('click', function(){
-    console.log($(this).attr('data-random'));
+    wins = 12;
+    losses = 10;
     
-    
-});
+    $("#losses").html(losses);
 
-});
+    ($("#wins").html(wins));
+    $(".crystal").on('click', function(){
+        console.log($(this).attr('data-random'));
+        randomCrystalNumber = $(this).attr('data-random');
+        parseInt(score);
+        parseInt(randomCrystalNumber);
+        score = +randomCrystalNumber + +score;
+        $("#yourScoreTotal").html(score);
+       console.log(score);
+       if (score > randomResult){
+          alert("You lost.")
+         //restartGame();
+          randomResult = Math.floor((Math.random() * 69)+30);
+          console.log(randomResult);
+          $("#randomNumber").html(randomResult);
+       }
+        
+        
+    });
+  // Game Functions, restart, reset variables, etc.
+  });
 
 //https://www.youtube.com/watch?v=4LSdLzAkK64
 //Here's how the app works:
