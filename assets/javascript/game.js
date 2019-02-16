@@ -5,12 +5,12 @@
     var wins;
     var score = 0;
     var randomCrystalNumber;
-    randomResult = Math.floor((Math.random() * 69)+30);
+    randomResult = Math.floor((Math.random() * 101)+19);
     console.log(randomResult);
     $("#randomNumber").html(randomResult);
 
     for (var i = 0; i <4; i++){
-        var random = Math.floor((Math.random() * 20)+1);
+        var random = Math.floor((Math.random() * 12) +1);
       // console.log(random);
         var image = "./assets/images/crystal" + [i] + ".jpg";
         // Each crystal image (with all it classes and attributes) will get added to the page.
@@ -19,6 +19,7 @@
                 "class":"crystal",
                 //"src": "./assets/images/crystal1.jpg",
                 "src": image,
+                "id" : [i],
                 "data-random":random});
         $(".crystals").append(crystal);
     }
@@ -39,15 +40,34 @@
        console.log(score);
        if (score > randomResult){
           alert("You lost.")
-         //restartGame();
-          randomResult = Math.floor((Math.random() * 69)+30);
-          console.log(randomResult);
-          $("#randomNumber").html(randomResult);
+         restartGame();
+
        }
         
         
     });
+  //**************************************************************************************************/
   // Game Functions, restart, reset variables, etc.
+  //**************************************************************************************************/
+    function restartGame(){
+      
+      randomResult = Math.floor((Math.random() * 120)+ 19);
+      console.log(randomResult);
+/* if my var reload isn't set locally.. in the first time it will be true */
+if (!localStorage.getItem("reload")) {
+  /* set reload locally and then reload the page */
+  localStorage.setItem("reload", "true");
+  location.reload();
+}
+/* after reload clear the localStorage */
+else {
+  localStorage.removeItem("reload");
+  // localStorage.clear(); // an option
+}
+
+    }
+
+
   });
 
 //https://www.youtube.com/watch?v=4LSdLzAkK64
